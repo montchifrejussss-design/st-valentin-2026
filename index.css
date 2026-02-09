@@ -1,0 +1,59 @@
+body{
+     text-align: justify;
+}
+.prembtn{
+    display: flex;
+    width: 97%;
+    gap: 1%;
+}
+.btnlike{
+    background: #e0e0e0;
+    color: black;
+    border-radius: 20px;
+    width: 32%;
+    padding: 4px 2px;
+    cursor: pointer;
+}
+.btnlike.active{
+    color: blue;
+    background: #f9fbfc;
+
+}
+.btncomment{
+    background: #e0e0e0;
+    border-radius: 20px;
+    width: 32%;
+}
+.btnshare{
+    background: #e0e0e0;
+    border-radius: 20px;
+    width: 32%;
+    margin-right: 2%;
+}
+.comment{
+    background: #f4f2f2;
+    border-radius: 20px;
+    padding: 2% 3%;
+    margin-left: 2%;
+    margin-right: 9%;
+    margin-bottom: 0px;
+}
+.action{
+    display: flex;
+    gap: 4%;
+    margin-left: 20%;
+    margin-top: 0px;
+
+}
+.btn1{
+    border: none;
+    background: none;
+    color: rgb(26, 24, 24);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn1.active{
+     color: blue;
+     background: #f9fbfc;
+}
