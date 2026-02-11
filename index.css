@@ -1,59 +1,190 @@
-body{
-     text-align: justify;
-}
-.prembtn{
-    display: flex;
-    width: 97%;
-    gap: 1%;
-}
-.btnlike{
-    background: #e0e0e0;
-    color: black;
-    border-radius: 20px;
-    width: 32%;
-    padding: 4px 2px;
-    cursor: pointer;
-}
-.btnlike.active{
-    color: blue;
-    background: #f9fbfc;
+/* Thème : Saint-Valentin Moderne
+   Développé pour : Fréjus MONTCHI 
+*/
 
-}
-.btncomment{
-    background: #e0e0e0;
-    border-radius: 20px;
-    width: 32%;
-}
-.btnshare{
-    background: #e0e0e0;
-    border-radius: 20px;
-    width: 32%;
-    margin-right: 2%;
-}
-.comment{
-    background: #f4f2f2;
-    border-radius: 20px;
-    padding: 2% 3%;
-    margin-left: 2%;
-    margin-right: 9%;
-    margin-bottom: 0px;
-}
-.action{
-    display: flex;
-    gap: 4%;
-    margin-left: 20%;
-    margin-top: 0px;
+:root {
 
+    --primary-red: #D72638;
+    --primary-hover: #B01E2E;
+    
+    /* Couleurs Secondaires & Accents */
+    --rose-soft: #F4978E;
+    --rose-light: #F8AD9D;
+    
+    /* Neutres & Backgrounds */
+    --bg-cream: #FFF0EF;
+    --card-white: #FFFFFF;
+    
+    /* Typographie */
+    --text-main: #2B2D42;
+    --text-muted: #6D6D6D;
+    
+    /* Effets */
+    --shadow-love: 0 4px 15px rgba(215, 38, 56, 0.15);
+    --gradient-valentine: linear-gradient(135deg, #D72638 0%, #FF4D6D 100%);
 }
-.btn1{
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.btn-valentine {
+    background: var(--gradient-valentine);
+    color: white;
     border: none;
-    background: none;
-    color: rgb(26, 24, 24);
-    font-weight: bold;
-    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
     cursor: pointer;
+    box-shadow: var(--shadow-love);
+    transition: transform 0.2s ease;
+    margin-left: 35%;
 }
-.btn1.active{
-     color: blue;
-     background: #f9fbfc;
+
+.btn-valentine:hover {
+    transform: scale(1.05);
+    background: var(--primary-hover);
+}
+
+.card {
+    background: var(--card-white);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid var(--rose-soft);
+}
+body {
+    background-image: url('image_de_fond.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    max-height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('image_de_fond.jpeg');
+}
+#titrePrincipal{
+    box-shadow: var(--shadow-love);
+    color: var(--primary-red);
+    text-align: center;
+    text-decoration: 2px solid blue;
+    font-family: monospace;
+    font-size: 2.5rex;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: 900;
+    letter-spacing: .15em;
+    animation: 
+    typewriter 6s steps(40, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+@keyframes typewriter{
+    0% {width:0}
+    75%{width:100%}
+    100%{width: 10%;}
+}
+@keyframes blink-caret{
+    from, to{ border-color:transparent}
+    50% { border-color: var(--primary-red)}
+}
+#imgAleato{
+    margin-left: 35%;
+}
+.container{
+    margin-top: 1%;
+    justify-items: center;
+    width: 99%;
+}
+.card-glass{
+    margin-top: %;
+    background: var(--card-white);
+    padding: 12px 12%;
+    border: 1px solid var(--primary-red);
+    box-shadow: var(--shadow-love);
+    border-radius: 23px;
+}
+.card-glass h2{
+    color: var(--primary-red);
+    font-family: "georgia", serif;
+    font-size: 1.8rem;
+    margin-top: -1%;
+    margin-bottom: 0%;
+}
+.input-group{
+    margin-bottom: 2%;
+}
+.card-glass input:focus{
+    border: 1px solid var(--primary-red);
+    background: #fff;
+}
+.card-glass input::placeholder{
+    color: #B01E2E;
+    opacity: 0.5;
+    font-size: italic;
+}
+footer{
+    margin-top: 56%;
+    color: var(--card-white);
+    width: 100%;
+    padding: 0px 0px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: #331d18;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--bg-cream);
+   
+
+}
+@media(min-width:768px){
+    .footer-container{
+        flex-direction: row;
+        gap: 40%;
+        justify-content: center;
+    }
+}
+.footer-text{
+        border-right: 4px solid rgba(red, green, blue, alpha);
+}
+.footerdroit{
+        border-right: 4px solid rgba(red, green, blue, alpha);
+}
+.animation-coeur {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: chuteCoeur linear forwards;
+}
+
+@keyframes chuteCoeur {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.love-quotes {
+    margin-top: 30px;
+    padding: 15px;
+    font-style: italic;
+    color: ;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(241, 6, 6, 0.1); /* Petit rappel du glassmorphism */
+    border-radius: 10px;
 }
